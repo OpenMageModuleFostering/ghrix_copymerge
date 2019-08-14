@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ghrix_Copymerge>
+            <version>1.0.0</version>
+        </Ghrix_Copymerge>
+    </modules>
+     
+    <global>
+        <helpers>
+            <ghrix_copymerge>
+                <class>Ghrix_Copymerge_Helper</class>
+            </ghrix_copymerge>
+        </helpers>
+                    
+        <blocks>
+            <ghrix_copymerge>
+                <class>Ghrix_Copymerge_Block</class>
+            </ghrix_copymerge>
+        </blocks>
+         
+        <models>
+            <ghrix_copymerge>
+                <class>Ghrix_Copymerge_Model</class>
+                <resourceModel>ghrix_copymerge_mysql4</resourceModel>
+            </ghrix_copymerge>
+            <ghrix_copymerge_mysql4>
+                <class>Ghrix_Copymerge_Model_Mysql4</class>
+                <entities>
+                    <merge>
+                        <table>ghrix_copymerge_merge</table>
+                    </merge>
+                </entities>
+            </ghrix_copymerge_mysql4>
+        </models>
+        <resources>
+            <ghrix_copymerge_setup>
+                <setup>
+                    <module>Ghrix_Copymerge</module>
+                </setup>
+            </ghrix_copymerge_setup>
+        </resources>
+    </global>
+     
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ghrix_Copymerge before="Mage_Adminhtml">Ghrix_Copymerge_Adminhtml</Ghrix_Copymerge>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+     
+    <adminhtml>
+        <layout>
+            <updates>
+                <ghrix_copymerge>
+                    <file>ghrix/copymerge.xml</file>
+                </ghrix_copymerge>
+            </updates>
+        </layout>
+      <menu>
+          <ghrix_copymerge_merge translate="title" module="ghrix_copymerge">
+              <title>Category Handler</title>
+              <action>adminhtml/merge</action>
+          </ghrix_copymerge_merge>
+        <sort_order>2</sort_order>
+    </menu>
+    </adminhtml>
+    
+    
+    
+
+</config>

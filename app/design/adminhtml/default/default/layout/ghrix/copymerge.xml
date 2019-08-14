@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout>
+	
+<default>
+<reference name="head">
+	<action method="addCss">
+		<name>ghrix/cat_merge.css</name>
+	</action>
+	<action method="addJs"><script>ghrix/cat_merge.js</script></action>
+</reference>
+</default>
+
+    <adminhtml_merge_index>
+        <reference name="content">
+            <block type="ghrix_copymerge/adminhtml_merge" name="ghrix_copymerge_merge" />
+        </reference>
+    </adminhtml_merge_index>
+</layout>

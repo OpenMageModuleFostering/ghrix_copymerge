@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ghrix_Copymerge>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ghrix_Copymerge>
+    </modules>
+</config>
